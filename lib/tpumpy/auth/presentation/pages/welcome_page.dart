@@ -28,7 +28,7 @@ class WelcomePage extends StatelessWidget {
                   color: Theme.of(context).colorScheme.surface),
             ),
             Text(
-              "HOMES",
+              "CONCEPTS",
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,

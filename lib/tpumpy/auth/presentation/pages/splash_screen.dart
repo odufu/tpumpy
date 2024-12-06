@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: Theme.of(context).colorScheme.surface),
               ),
               Text(
-                "HOMES",
+                "CONCEPT",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
