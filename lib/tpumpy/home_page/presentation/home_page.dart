@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   children: [
                     Image.asset(
-                      "assets/images/roundedLogo.png",
+                      "assets/tpumpyLogo.png",
                       width: 40,
                     ),
                     const SizedBox(

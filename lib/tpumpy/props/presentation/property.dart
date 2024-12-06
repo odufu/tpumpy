@@ -17,7 +17,7 @@ class Property extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(
-                    "assets/images/roundedLogo.png",
+                    "assets/tpumpyLogo.png",
                     color: Theme.of(context).colorScheme.primary,
                     width: 40,
                   ),

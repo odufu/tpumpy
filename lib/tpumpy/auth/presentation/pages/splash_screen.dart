@@ -29,14 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                  width: 100,
-                  child: Image.asset("assets/images/roundedLogo.png")),
+              SizedBox(width: 100, child: Image.asset("assets/tpumpyLogo.png")),
+              //assets/tpupylogo.png
               const SizedBox(
                 height: 60,
               ),
               Text(
-                "SALIS",
+                "T-PUMPY",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w100,

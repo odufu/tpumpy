@@ -18,11 +18,9 @@ class WelcomePage extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            SizedBox(
-                width: 100,
-                child: Image.asset("assets/images/roundedLogo.png")),
+            SizedBox(width: 100, child: Image.asset("assets/tpumpyLogo.png")),
             Text(
-              "SALIS",
+              "T-PUMPY",
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w100,
@@ -77,7 +75,7 @@ class WelcomePage extends StatelessWidget {
                         padding: EdgeInsets.all(15),
                         child: Text(
                           textAlign: TextAlign.center,
-                          "Discover your dream properties with Salis Home, Where ownership meets excelence seemlesly",
+                          "Discover your dream properties with T-Pumpy Home, Where ownership meets excelence seemlesly",
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
