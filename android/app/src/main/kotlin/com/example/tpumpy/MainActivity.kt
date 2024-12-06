@@ -1,4 +1,4 @@
-package com.company.salis
+package com.example.tpumpy
 
 import io.flutter.embedding.android.FlutterActivity
 
