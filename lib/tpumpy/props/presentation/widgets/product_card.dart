@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:salis/tpumpy/props/data/co_ownership.dart';
-import 'package:salis/tpumpy/props/presentation/widgets/pool_progress_bar.dart';
+import '../../../../tpumpy/props/data/co_ownership.dart';
+import '../../../../tpumpy/props/presentation/widgets/pool_progress_bar.dart';
 
 import '../../../../tpumpy/core/utils/helper_functions.dart';
 import '../../../../tpumpy/props/data/property.dart';

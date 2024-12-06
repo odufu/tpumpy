@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:salis/tpumpy/payment/presentation/pages/co_ownership_payment_summary_page.dart';
-import 'package:salis/tpumpy/payment/presentation/pages/instalment_plan_selection_page.dart';
-import 'package:salis/tpumpy/payment/presentation/pages/payment_summary.dart';
+import '../../../../tpumpy/payment/presentation/pages/co_ownership_payment_summary_page.dart';
+import '../../../../tpumpy/payment/presentation/pages/instalment_plan_selection_page.dart';
+import '../../../../tpumpy/payment/presentation/pages/payment_summary.dart';
 
 import '../../../../tpumpy/props/data/co_ownership.dart';
 import '../../../../tpumpy/props/data/property.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salis/tpumpy/core/widgets/app_button.dart';
+import '../../../../tpumpy/core/widgets/app_button.dart';
 import '../../../core/utils/helper_functions.dart';
 import '../../../home/presentation/pages/home_page.dart';
 import '../../../props/data/property.dart';

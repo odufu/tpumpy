@@ -1,5 +1,5 @@
-import 'package:salis/tpumpy/payment/presentation/pages/co_ownership_payment_summary_page.dart';
-import 'package:salis/tpumpy/props/data/property.dart';
+import '../../../../tpumpy/payment/presentation/pages/co_ownership_payment_summary_page.dart';
+import '../../../../tpumpy/props/data/property.dart';
 
 import '../../../../tpumpy/core/utils/helper_functions.dart';
 import '../../../../tpumpy/core/widgets/app_button.dart';

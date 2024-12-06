@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:salis/tpumpy/core/utils/helper_functions.dart';
-import 'package:salis/tpumpy/core/widgets/app_button.dart';
-import 'package:salis/tpumpy/payment/presentation/pages/payment_summary.dart';
-import 'package:salis/tpumpy/props/data/property.dart';
+import '../../../../tpumpy/core/utils/helper_functions.dart';
+import '../../../../tpumpy/core/widgets/app_button.dart';
+import '../../../../tpumpy/payment/presentation/pages/payment_summary.dart';
+import '../../../../tpumpy/props/data/property.dart';
 
 import '../../../props/data/co_ownership.dart';
 import '../../../props/presentation/widgets/pool_progress_bar.dart';
