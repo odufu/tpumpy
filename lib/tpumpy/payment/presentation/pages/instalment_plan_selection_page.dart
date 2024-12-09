@@ -188,19 +188,160 @@ class _InstalmentPlanSelectionPageState
             boxShadow: [BoxShadow(blurRadius: 10)]),
         padding: const EdgeInsets.symmetric(vertical: 12),
         child: AppButton(
-            text: "Continue Payment",
-            onPress: () {
-              HelperFunctions.routePushTo(
-                  PaymentSummary(
-                    property: widget.property,
-                    payment: double.parse(initialPaymentTextController.text),
-                  ),
-                  context);
+          text: "Start This Plan",
+          onPress: () {
+            if (!canProceedToPayment) {
               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                content: Text("Redirecting to Paystack..."),
-                backgroundColor: Colors.green,
+                content: Text("Please complete the plan setup first"),
+                backgroundColor: Colors.red,
               ));
-            }),
+              return;
+            }
+
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: const Text("Confirm Your Plan"),
+                  content: SizedBox(
+                    height: MediaQuery.of(context).size.height *
+                        0.5, // Restrict height
+                    width: MediaQuery.of(context).size.width *
+                        0.8, // Restrict width
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Summary of Your Plan:",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(height: 10),
+                          Text("Property: ${widget.title}"),
+                          Text(
+                            "Total Cost: ₦${widget.price.toStringAsFixed(2)}",
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Initial Payment: ₦${initialPaymentTextController.text}",
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Frequency: $frequency",
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(height: 10),
+                          const Text("Instalment Plan:"),
+                          const Divider(),
+                          Table(
+                            columnWidths: const {
+                              0: FixedColumnWidth(40), // Column for numbers
+                              1: FlexColumnWidth(), // Column for dates
+                              2: IntrinsicColumnWidth(), // Column for amounts
+                            },
+                            border: TableBorder.all(
+                              color: Colors.grey.shade300,
+                              width: 1,
+                              style: BorderStyle.solid,
+                            ),
+                            children: [
+                              TableRow(
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .primary
+                                      .withOpacity(0.1),
+                                ),
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "#",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Date",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Amount",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.right,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              ...List.generate(instalmentPlan.length, (index) {
+                                final plan = instalmentPlan[index];
+                                return TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "${index + 1}",
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(plan["date"] ?? ""),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        plan["amount"] ?? "",
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ),
+                                  ],
+                                );
+                              }),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text("Cancel"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context); // Close the dialog
+                        HelperFunctions.routePushTo(
+                          PaymentSummary(
+                            property: widget.property,
+                            payment:
+                                double.parse(initialPaymentTextController.text),
+                          ),
+                          context,
+                        );
+                        ScaffoldMessenger.of(context)
+                            .showSnackBar(const SnackBar(
+                          content: Text("Redirecting to Paystack..."),
+                          backgroundColor: Colors.green,
+                        ));
+                      },
+                      child: const Text("Confirm"),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

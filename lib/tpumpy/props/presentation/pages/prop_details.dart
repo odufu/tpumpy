@@ -715,7 +715,7 @@ class _PropDetailsState extends State<PropDetails> {
           children: [
             widget.property.installmentPlan != null
                 ? AppButton(
-                    text: "Start Installment",
+                    text: "Start a Plan",
                     width: MediaQuery.of(context).size.width * .4,
                     onPress: () {
                       HelperFunctions.routePushTo(

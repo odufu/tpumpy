@@ -6,7 +6,7 @@ ThemeData tpumpyMode = ThemeData(
     colorScheme: ColorScheme(
         brightness: Brightness.light,
         primary: Color.fromARGB(255, 1, 1, 42),
-        onPrimary: Colors.black,
+        onPrimary: const Color.fromARGB(255, 255, 232, 232),
         secondary: AppColor.secondaryColor,
         tertiary: Colors.orange,
         onSecondary: Colors.white,
