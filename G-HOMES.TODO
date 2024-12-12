@@ -1,0 +1,263 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1733756695280,
+        "children": [
+          {
+            "key": 1733756852409,
+            "children": [],
+            "todo": {
+              "content": "INSTALLMENT",
+              "id": 1733756852409,
+              "level": "default",
+              "done": false,
+              "start": 1733756852409
+            }
+          },
+          {
+            "key": 1733756858714,
+            "children": [],
+            "todo": {
+              "content": "CO-OWNING",
+              "id": 1733756858714,
+              "level": "default",
+              "done": false,
+              "start": 1733756858714
+            }
+          },
+          {
+            "key": 1733756865132,
+            "children": [],
+            "todo": {
+              "content": "OUTRIGHT",
+              "id": 1733756865132,
+              "level": "default",
+              "done": false,
+              "start": 1733756865132
+            }
+          }
+        ],
+        "todo": {
+          "content": "AUTOMATIC INVOICING",
+          "id": 1733756695280,
+          "level": "default",
+          "done": false,
+          "start": 1733756695280
+        }
+      },
+      {
+        "key": 1733756702944,
+        "children": [
+          {
+            "key": 1733756731803,
+            "children": [
+              {
+                "key": 1733756741393,
+                "children": [],
+                "todo": {
+                  "content": "GREEN TO SIGNIFY : NO DEFAULTING",
+                  "id": 1733756741393,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733756741393
+                }
+              },
+              {
+                "key": 1733756782064,
+                "children": [],
+                "todo": {
+                  "content": "YELLOW TO SIGNIFY: DUE DATE CLOSE, DEFAULTING IN FEW DAYS",
+                  "id": 1733756782064,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733756782064
+                }
+              },
+              {
+                "key": 1733756811198,
+                "children": [],
+                "todo": {
+                  "content": "RED TO SIGNIFY: DUE DATE IS ON, DEFAULTING",
+                  "id": 1733756811198,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733756811198
+                }
+              }
+            ],
+            "todo": {
+              "content": "INSTALLMENTS",
+              "id": 1733756731803,
+              "level": "default",
+              "done": false,
+              "start": 1733756731803
+            }
+          }
+        ],
+        "todo": {
+          "content": "PUSH NOTIFICATIONS",
+          "id": 1733756702944,
+          "level": "default",
+          "done": false,
+          "start": 1733756702944
+        }
+      },
+      {
+        "key": 1733756874783,
+        "children": [
+          {
+            "key": 1733756889529,
+            "children": [],
+            "todo": {
+              "content": "Admin should be able to add overheads to each frequency, in finatial value, due to Inflation prospect and value rise",
+              "id": 1733756889529,
+              "level": "default",
+              "done": false,
+              "start": 1733756889529
+            }
+          },
+          {
+            "key": 1733756940213,
+            "children": [],
+            "todo": {
+              "content": "meaning there should be a space for creating overhead when creating INSTALLMENT-PLAN",
+              "id": 1733756940213,
+              "level": "default",
+              "done": false,
+              "start": 1733756940213
+            }
+          },
+          {
+            "key": 1733756980389,
+            "children": [],
+            "todo": {
+              "content": "Each model should be given a CRUD, later how to access it with different access levels can be granted",
+              "id": 1733756980389,
+              "level": "default",
+              "done": false,
+              "start": 1733756980389
+            }
+          }
+        ],
+        "todo": {
+          "content": "OTHER IDEAS BY EMERALD CODELINES",
+          "id": 1733756874783,
+          "level": "default",
+          "done": false,
+          "start": 1733756874783
+        }
+      },
+      {
+        "key": 1733757031139,
+        "children": [
+          {
+            "key": 1733757049039,
+            "children": [
+              {
+                "key": 1733757062691,
+                "children": [],
+                "todo": {
+                  "content": "client",
+                  "id": 1733757062691,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733757062691
+                }
+              },
+              {
+                "key": 1733757072867,
+                "children": [],
+                "todo": {
+                  "content": "agent",
+                  "id": 1733757072867,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733757072867
+                }
+              },
+              {
+                "key": 1733757079499,
+                "children": [],
+                "todo": {
+                  "content": "admin",
+                  "id": 1733757079499,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733757079499
+                }
+              },
+              {
+                "key": 1733757087653,
+                "children": [],
+                "todo": {
+                  "content": "management",
+                  "id": 1733757087653,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733757087653
+                }
+              },
+              {
+                "key": 1733757094622,
+                "children": [],
+                "todo": {
+                  "content": "lawer",
+                  "id": 1733757094622,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733757094622
+                }
+              },
+              {
+                "key": 1733757108514,
+                "children": [],
+                "todo": {
+                  "content": "accountant",
+                  "id": 1733757108514,
+                  "level": "default",
+                  "done": false,
+                  "start": 1733757108514
+                }
+              }
+            ],
+            "todo": {
+              "content": "Users",
+              "id": 1733757049039,
+              "level": "default",
+              "done": false,
+              "start": 1733757049039
+            }
+          }
+        ],
+        "todo": {
+          "content": "ACCEESS LEVELS SHOULD BE ADDED",
+          "id": 1733757031139,
+          "level": "default",
+          "done": false,
+          "start": 1733757031139
+        }
+      }
+    ],
+    "expandKeys": [
+      1733756702944,
+      1733756731803,
+      1733756695280,
+      1733756874783,
+      1733757031139,
+      1733757049039
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": "G-HOMES",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1733757120535"
+  }
+}

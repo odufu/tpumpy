@@ -6,6 +6,7 @@ import '../../../tpumpy/props/data/payment_pool.dart';
 
 class Property {
   //BASIC DETAILS
+  final String id;
   final String title;
   final String details;
   final Location? location;
@@ -55,6 +56,7 @@ class Property {
 
   Property({
     //BASIC DETAILS
+    required this.id,
     required this.title,
     required this.price,
     required this.details,
@@ -101,6 +103,7 @@ class Property {
 
 List<Property> myProperties = [
   Property(
+      id: "1",
       title: "3- Bed, Semi Detached",
       details:
           "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -138,6 +141,7 @@ List<Property> myProperties = [
         frequency: PaymentFrequency.monthly,
       )),
   Property(
+      id: "2",
       title: "Semi Detached Home",
       details:
           "Immerse yourself in luxury with this mordern apartment featuring spacious rooms, top-notch amenities, and breathtaking views. Ideal for those seeking a blend of comfort and sophistication",
@@ -170,6 +174,7 @@ List<Property> myProperties = [
       //PAYMENT
       outrightPlan: 2000000),
   Property(
+      id: "3",
       title: "Self Contain-Hostel",
       details:
           "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -207,6 +212,7 @@ List<Property> myProperties = [
         sharePrice: 400000,
       )),
   Property(
+    id: "4",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -241,6 +247,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "5",
     title: "Event Hall: 300 Capacity",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -280,6 +287,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "6",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -314,6 +322,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "7",
     title: "Land for 4-Bed Duplex",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -348,6 +357,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "8",
     title: "5-Bed Flat",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -382,6 +392,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "9",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -416,6 +427,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "10",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -450,6 +462,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "11",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -484,6 +497,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "13",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -518,6 +532,7 @@ List<Property> myProperties = [
     isTaken: true,
   ),
   Property(
+    id: "14",
     title: "T-Pumpy Homes Stead",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -555,6 +570,7 @@ List<Property> myProperties = [
 
 List<Property> newProperties = [
   Property(
+      id: "15",
       title: "2-Bed Flat, Appartment",
       details: "The best of all mindset of reliability and maximum comfort",
       price: 20000000,
@@ -591,6 +607,7 @@ List<Property> newProperties = [
         sharePrice: 3333333.33,
       )),
   Property(
+    id: "16",
     title: "Sandas Luxo Dubplex 3-Bedroom",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -624,6 +641,7 @@ List<Property> newProperties = [
     outrightPlan: 45000000,
   ),
   Property(
+    id: "17",
     title: "Semi-Detarched Delux",
     details:
         "Super sliked and engeneered with the mindset of reliability and maximum comfort",
@@ -663,6 +681,7 @@ List<Property> newProperties = [
     ),
   ),
   Property(
+      id: "18",
       title: "2-Bed Flat, Appartment",
       details: "The best of all mindset of reliability and maximum comfort",
       price: 20000000,
@@ -699,6 +718,7 @@ List<Property> newProperties = [
         sharePrice: 3333333.33,
       )),
   Property(
+    id: "19",
     title: "Sandas Luxo Dubplex 3-Bedroom",
     details:
         "The very best of comfort in homes as engeneered with the mindset of reliability and maximum comfort",
@@ -732,6 +752,7 @@ List<Property> newProperties = [
     outrightPlan: 45000000,
   ),
   Property(
+    id: "20",
     title: "Semi-Detarched Delux",
     details:
         "Super sliked and engeneered with the mindset of reliability and maximum comfort",

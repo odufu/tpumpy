@@ -8,7 +8,7 @@
 #include "flutter/generated_plugin_registrant.h"
 
 struct _MyApplication {
-  GtkApplication parent_instance;
+  GtkApplication paPending_instance;
   char** dart_entrypoint_arguments;
 };
 
@@ -87,7 +87,7 @@ static void my_application_startup(GApplication* application) {
 
   // Perform any actions required at application startup.
 
-  G_APPLICATION_CLASS(my_application_parent_class)->startup(application);
+  G_APPLICATION_CLASS(my_application_paPending_class)->startup(application);
 }
 
 // Implements GApplication::shutdown.
@@ -96,14 +96,14 @@ static void my_application_shutdown(GApplication* application) {
 
   // Perform any actions required at application shutdown.
 
-  G_APPLICATION_CLASS(my_application_parent_class)->shutdown(application);
+  G_APPLICATION_CLASS(my_application_paPending_class)->shutdown(application);
 }
 
 // Implements GObject::dispose.
 static void my_application_dispose(GObject* object) {
   MyApplication* self = MY_APPLICATION(object);
   g_clear_pointer(&self->dart_entrypoint_arguments, g_strfreev);
-  G_OBJECT_CLASS(my_application_parent_class)->dispose(object);
+  G_OBJECT_CLASS(my_application_paPending_class)->dispose(object);
 }
 
 static void my_application_class_init(MyApplicationClass* klass) {

@@ -1,0 +1,99 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1733941080087,
+        "children": [
+          {
+            "key": 1733941087158,
+            "children": [],
+            "todo": {
+              "content": "PENDING",
+              "id": 1733941087158,
+              "level": "default",
+              "done": false,
+              "start": 1733941087158
+            }
+          },
+          {
+            "key": 1733941092626,
+            "children": [],
+            "todo": {
+              "content": "COMPLETED",
+              "id": 1733941092626,
+              "level": "default",
+              "done": false,
+              "start": 1733941092626
+            }
+          },
+          {
+            "key": 1733941133953,
+            "children": [],
+            "todo": {
+              "content": "OUTSTANDING",
+              "id": 1733941133953,
+              "level": "default",
+              "done": false,
+              "start": 1733941133953
+            }
+          },
+          {
+            "key": 1733941145644,
+            "children": [],
+            "todo": {
+              "content": "TOTAL INFLOW",
+              "id": 1733941145644,
+              "level": "default",
+              "done": false,
+              "start": 1733941145644
+            }
+          },
+          {
+            "key": 1733941313386,
+            "children": [],
+            "todo": {
+              "content": "DAILY SALES",
+              "id": 1733941313386,
+              "level": "default",
+              "done": false,
+              "start": 1733941313386
+            }
+          },
+          {
+            "key": 1733941330254,
+            "children": [],
+            "todo": {
+              "content": "OFFER LETTERS/INVOICES",
+              "id": 1733941330254,
+              "level": "default",
+              "done": false,
+              "start": 1733941330254
+            }
+          }
+        ],
+        "todo": {
+          "content": "TRANSACTION",
+          "id": 1733941080087,
+          "level": "default",
+          "done": false,
+          "start": 1733941080087
+        }
+      }
+    ],
+    "expandKeys": [
+      1733941080087
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": "TRANSACTIONS",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1733942247589"
+  }
+}

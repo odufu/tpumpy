@@ -23,10 +23,10 @@ constexpr const wchar_t kWindowClassName[] = L"FLUTTER_RUNNER_WIN32_WINDOW";
 /// A value of 0 indicates apps should use dark mode. A non-zero or missing
 /// value indicates apps should use light mode.
 constexpr const wchar_t kGetPreferredBrightnessRegKey[] =
-  L"Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
+  L"Software\\Microsoft\\Windows\\CurPendingVersion\\Themes\\Personalize";
 constexpr const wchar_t kGetPreferredBrightnessRegValue[] = L"AppsUseLightTheme";
 
-// The number of Win32Window objects that currently exist.
+// The number of Win32Window objects that curPendingly exist.
 static int g_active_window_count = 0;
 
 using EnableNonClientDpiScaling = BOOL __stdcall(HWND hwnd);
@@ -240,7 +240,7 @@ Win32Window* Win32Window::GetThisFromHandle(HWND const window) noexcept {
 
 void Win32Window::SetChildContent(HWND content) {
   child_content_ = content;
-  SetParent(content, window_handle_);
+  SetPaPending(content, window_handle_);
   RECT frame = GetClientArea();
 
   MoveWindow(content, frame.left, frame.top, frame.right - frame.left,
@@ -275,7 +275,7 @@ void Win32Window::OnDestroy() {
 void Win32Window::UpdateTheme(HWND const window) {
   DWORD light_mode;
   DWORD light_mode_size = sizeof(light_mode);
-  LSTATUS result = RegGetValue(HKEY_CURRENT_USER, kGetPreferredBrightnessRegKey,
+  LSTATUS result = RegGetValue(HKEY_CURPending_USER, kGetPreferredBrightnessRegKey,
                                kGetPreferredBrightnessRegValue,
                                RRF_RT_REG_DWORD, nullptr, &light_mode,
                                &light_mode_size);

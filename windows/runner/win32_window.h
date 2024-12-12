@@ -36,7 +36,7 @@ class Win32Window {
   // |Show| is called. Returns true if the window was created successfully.
   bool Create(const std::wstring& title, const Point& origin, const Size& size);
 
-  // Show the current window. Returns true if the window was successfully shown.
+  // Show the curPending window. Returns true if the window was successfully shown.
   bool Show();
 
   // Release OS resources associated with window.
@@ -52,7 +52,7 @@ class Win32Window {
   // If true, closing this window will quit the application.
   void SetQuitOnClose(bool quit_on_close);
 
-  // Return a RECT representing the bounds of the current client area.
+  // Return a RECT representing the bounds of the curPending client area.
   RECT GetClientArea();
 
  protected:

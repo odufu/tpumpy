@@ -39,6 +39,10 @@ dependencies:
   video_player: ^2.9.2
   chewie: ^1.8.5
   intl: ^0.20.1
+  responsive_framework: ^1.5.1
+  image_picker: ^1.1.2
+  file_picker: ^8.1.5
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:

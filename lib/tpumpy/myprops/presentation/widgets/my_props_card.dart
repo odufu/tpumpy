@@ -27,7 +27,7 @@ class MyPropsCard extends StatefulWidget {
 }
 
 class _MyPropsCardState extends State<MyPropsCard> {
-  int _currentIndex = 0;
+  int _curPendingIndex = 0;
   late Timer _timer;
 
   @override
@@ -39,7 +39,8 @@ class _MyPropsCardState extends State<MyPropsCard> {
   void _startAutoSlide() {
     _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
       setState(() {
-        _currentIndex = (_currentIndex + 1) % widget.property.images!.length;
+        _curPendingIndex =
+            (_curPendingIndex + 1) % widget.property.images!.length;
       });
     });
   }
@@ -57,7 +58,8 @@ class _MyPropsCardState extends State<MyPropsCard> {
   void _onNext() {
     _stopAutoSlide();
     setState(() {
-      _currentIndex = (_currentIndex + 1) % widget.property.images!.length;
+      _curPendingIndex =
+          (_curPendingIndex + 1) % widget.property.images!.length;
     });
     _startAutoSlide();
   }
@@ -65,8 +67,9 @@ class _MyPropsCardState extends State<MyPropsCard> {
   void _onPrevious() {
     _stopAutoSlide();
     setState(() {
-      _currentIndex = (_currentIndex - 1 + widget.property.images!.length) %
-          widget.property.images!.length;
+      _curPendingIndex =
+          (_curPendingIndex - 1 + widget.property.images!.length) %
+              widget.property.images!.length;
     });
     _startAutoSlide();
   }
@@ -87,7 +90,7 @@ class _MyPropsCardState extends State<MyPropsCard> {
                 borderRadius:
                     const BorderRadius.vertical(top: Radius.circular(16)),
                 child: Image.asset(
-                  widget.property.images![_currentIndex],
+                  widget.property.images![_curPendingIndex],
                   height: 180,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -127,7 +130,7 @@ class _MyPropsCardState extends State<MyPropsCard> {
                   onTap: () {
                     _stopAutoSlide();
                     setState(() {
-                      _currentIndex = entry.key;
+                      _curPendingIndex = entry.key;
                     });
                     _startAutoSlide();
                   },
@@ -137,7 +140,7 @@ class _MyPropsCardState extends State<MyPropsCard> {
                     margin: const EdgeInsets.symmetric(horizontal: 4.0),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: _currentIndex == entry.key
+                      color: _curPendingIndex == entry.key
                           ? Colors.blueAccent
                           : Colors.grey,
                     ),

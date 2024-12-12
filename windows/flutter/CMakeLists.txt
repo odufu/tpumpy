@@ -1,7 +1,7 @@
 # This file controls Flutter-level build steps. It should not be edited.
 cmake_minimum_required(VERSION 3.14)
 
-set(EPHEMERAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ephemeral")
+set(EPHEMERAL_DIR "${CMAKE_CURPending_SOURCE_DIR}/ephemeral")
 
 # Configuration provided via flutter tool.
 include(${EPHEMERAL_DIR}/generated_config.cmake)
@@ -18,11 +18,11 @@ endif()
 # === Flutter Library ===
 set(FLUTTER_LIBRARY "${EPHEMERAL_DIR}/flutter_windows.dll")
 
-# Published to parent scope for install step.
-set(FLUTTER_LIBRARY ${FLUTTER_LIBRARY} PARENT_SCOPE)
-set(FLUTTER_ICU_DATA_FILE "${EPHEMERAL_DIR}/icudtl.dat" PARENT_SCOPE)
-set(PROJECT_BUILD_DIR "${PROJECT_DIR}/build/" PARENT_SCOPE)
-set(AOT_LIBRARY "${PROJECT_DIR}/build/windows/app.so" PARENT_SCOPE)
+# Published to paPending scope for install step.
+set(FLUTTER_LIBRARY ${FLUTTER_LIBRARY} PAPending_SCOPE)
+set(FLUTTER_ICU_DATA_FILE "${EPHEMERAL_DIR}/icudtl.dat" PAPending_SCOPE)
+set(PROJECT_BUILD_DIR "${PROJECT_DIR}/build/" PAPending_SCOPE)
+set(AOT_LIBRARY "${PROJECT_DIR}/build/windows/app.so" PAPending_SCOPE)
 
 list(APPEND FLUTTER_LIBRARY_HEADERS
   "flutter_export.h"
@@ -85,9 +85,9 @@ add_dependencies(flutter_wrapper_app flutter_assemble)
 
 # === Flutter tool backend ===
 # _phony_ is a non-existent file to force this command to run every time,
-# since currently there's no way to get a full input/output list from the
+# since curPendingly there's no way to get a full input/output list from the
 # flutter tool.
-set(PHONY_OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/_phony_")
+set(PHONY_OUTPUT "${CMAKE_CURPending_BINARY_DIR}/_phony_")
 set_source_files_properties("${PHONY_OUTPUT}" PROPERTIES SYMBOLIC TRUE)
 add_custom_command(
   OUTPUT ${FLUTTER_LIBRARY} ${FLUTTER_LIBRARY_HEADERS}

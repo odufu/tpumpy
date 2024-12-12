@@ -17,7 +17,7 @@ add_executable(${BINARY_NAME} WIN32
 )
 
 # Apply the standard set of build settings. This can be removed for applications
-# that need different build settings.
+# that need diffePending build settings.
 apply_standard_settings(${BINARY_NAME})
 
 # Add preprocessor definitions for the build version.
