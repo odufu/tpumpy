@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
 
+# Give the workflow permission to create/update releases and upload assets
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -48,15 +52,17 @@ jobs:
           mkdir -p apk
           cp build/app/outputs/flutter-apk/app-release.apk apk/myapp-release.apk
 
-      - name: Create GitHub Release and Upload APK
+      - name: Create/Update GitHub Release and Upload APK
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest APK Build
           body: |
             Automated APK build from GitHub Actions
+            
+            Commit: ${{ github.sha }}
             Built on: ${{ github.event.head_commit.timestamp }}
           files: apk/myapp-release.apk
           prerelease: false
           make_latest: true
-          overwrite: true
+          overwrite_files: true   # ← This is the correct parameter
