@@ -9,25 +9,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin' # You can also use 'zulu' if needed.
+          distribution: 'temurin'
           java-version: '17'
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.5'
+          flutter-version: '3.29.0'   # Updated to a newer stable (change if you prefer exact 3.24.5)
+          cache: true
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Build APK
-        run: flutter build apk --release
+      - name: Clean and build APK
+        run: |
+          flutter clean
+          flutter pub get
+          flutter build apk --release
 
       - name: Set up Google Cloud SDK
         run: |
@@ -54,10 +68,11 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
           firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
-            --app 1:746270310311:android:8f6ec6db15ea2ab9f30082\
+            --app 1:746270310311:android:8f6ec6db15ea2ab9f30082 \
             --release-notes "Automated release from GitHub Actions" \
             --groups "testers" \
             --project test-8ec31
 
       - name: Clean up
-        run: rm firebase_service_account.json
+        if: always()
+        run: rm -f firebase_service_account.json
