@@ -6,7 +6,7 @@
         "children": [
           {
             "key": 1733756852409,
-            "children": [],
+            "children": [s],
             "todo": {
               "content": "INSTALLMENT",
               "id": 1733756852409,
