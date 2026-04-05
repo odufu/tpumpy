@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tpumpy/tpumpy/admin/presentation/pages/admin_pannel_page.dart';
-import 'package:tpumpy/tpumpy/auth/presentation/pages/splash_screen.dart';
+import 'package:tpumpy/tpumpy/auth/presentation/pages/welcome_page.dart';
 import 'package:tpumpy/tpumpy/core/theme/salis_mode.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Tpumpy App',
       theme: tpumpyMode,
-      home: AdminPanelPage(),
+      home: WelcomePage(),
     );
   }
 }
